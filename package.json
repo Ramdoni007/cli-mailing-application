@@ -1,0 +1,9 @@
+{
+  "name": "cli-mailing-application",
+  "version": "1.0.0",
+  "description": "Client-Server mailing application based on Terminal or CLI",
+  "main": "index.js",
+  "repository": "https://github.com/Ramdoni007/cli-mailing-application.git",
+  "author": "Ramdoni007 <ramd42156@gmail.com>",
+  "license": "GNU"
+}

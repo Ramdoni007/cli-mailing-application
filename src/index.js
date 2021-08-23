@@ -1,10 +1,11 @@
-const readline = require("readline");
+const readlineSync = require("readline-sync");
 const http = require("http");
 
-const prompt = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const to = readlineSync.question("To      : ");
+const from = readlineSync.question("From    : ");
+const message = readlineSync.question("Message : ");
+
+const data = JSON.stringify({ data: { to, from, message } });
 
 const options = {
   hostname: "localhost",
@@ -16,19 +17,8 @@ const options = {
   },
 };
 
-let data = JSON.stringify({});
-
-prompt.question("To : ", function (to) {
-  prompt.question("From : ", function (from) {
-    prompt.question("Message : ", function (message) {
-      data = JSON.stringify({ data: { to, from, message } });
-      prompt.close();
-    });
-  });
-});
-
 const req = http.request(options, function (res) {
-  console.log("statusCode: " + res.statusCode);
+  console.log("\nstatusCode: " + res.statusCode);
 
   res.on("data", function (d) {
     process.stdout.write(d);

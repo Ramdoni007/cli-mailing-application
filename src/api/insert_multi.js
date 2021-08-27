@@ -22,6 +22,8 @@ db.connect(function (err) {
 
   db.query(sql, [values], function (err, result) {
     if (err) throw err;
-    console.log("Number Record Berhasil Dimasukan" + result.affectedRows);
+    console.log(
+      " Yey !!! Number Record Berhasil Dimasukan : " + result.affectedRows
+    );
   });
 });

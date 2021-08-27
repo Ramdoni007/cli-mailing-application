@@ -4,6 +4,7 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "user-tester",
   password: "",
+  database: "table_messages",
 });
 
 // db.connect(function (err) {

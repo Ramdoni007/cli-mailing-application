@@ -1,4 +1,5 @@
 const http = require("http");
+const insertData = require("./insert_data");
 
 const PORT = process.env.PORT || 5000;
 
@@ -13,7 +14,7 @@ const server = http.createServer(async (req, res) => {
     });
 
     req.on("end", () => {
-      console.log(JSON.parse(body));
+      insertData(JSON.parse(body));
     });
 
     res.writeHead(201, { "Content-Type": "application/json" });

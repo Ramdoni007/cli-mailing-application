@@ -7,6 +7,7 @@
   "author": "Ramdoni007 <ramd42156@gmail.com>",
   "license": "GNU",
   "dependencies": {
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "readline-sync": "^1.4.10"
   }
 }
